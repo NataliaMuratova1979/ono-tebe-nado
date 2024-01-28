@@ -1,7 +1,7 @@
 body {
-    margin: 0;
+    margin: auto;
     background-color: #fff;
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Raleway', Arial, sans-serif; 
     font-weight: 400; 
     font-style: normal;
     line-height: normal;
@@ -10,34 +10,30 @@ body {
 /*header — вся шапка*/
 header {
     display: grid;
-    width: 1052;
-    heigth: 105;
-    margin: 92px 24px 96px 24px;
-    grid-template-columns: 1fr 148px 1fr;
+    padding: 92px 50px 96px 50px;
+    grid-template-columns: 1fr min-content 1fr;
     color: #000;
-}
-
-/*header__menu — контейнер навигации*/
-.header__menu {
-    display: flex;
-    justify-content: center;
-    padding-top: 44px;
 }
 
 /*header__links-list — список ссылок*/
 .header_links-list {
-    display: flex;
-    flex-direction: row;
-    gap: 31.48px;
-    justify-content: evenly;
-    margin-top: 44px;
-    margin-left: 26.52px;
+  padding-top: 44px;
+  display: flex;
+  flex-direction: row;
+  gap: 31.48px;
 }
+
+/*header__menu — контейнер навигации*/
 
 /*ссылка без кружочка*/
 .header__links-list-item_no-bullit {
     font-size: 18px;
     list-style-type: none;
+}
+
+/*header__link — ссылка*/
+.header__link {
+  text-decoration: none;
 }
 
 /*header__links-list-item — пункт списка ссылок с кружочком*/
@@ -49,9 +45,10 @@ header {
 
 /*header__logo — контейнер логотипа*/
 .header_logo {
-    width: 148px;
-    height: 105px;
-    flex-shrink: 0;
+  display: block;
+  width: 148px;
+  height: 105px;
+  flex-shrink: 0;
 }
 
 /*header__logo-image — картинка с логотипом*/
@@ -60,35 +57,34 @@ header {
     height: 105px;    
 }
 
-/*header__link — ссылка*/
-.header__link {
-  text-decoration: none;
-}
-
 /*header__link_active — активная ссылка*/
-
-/*address — контейнер с адресом*/
 .address {
+  align-self: end;
+  justify-self: end;
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
-  justify-self: flex-end;
+  margin-right: 34px;
+}
+
+/*address — контейнер с адресом*/
+.header__address {
   font-size: 18px;
+  font-style: normal;
   line-height: 24.3px; 
   letter-spacing: 0.18px;
-  width: 265.48px;
+  max-width: 220.48px;
 }
 
 /*cover — вся секция*/
 .cover {
-  height: 757px;
-  background-color: #999999;
   background-image: url(../images/cover.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   z-index: 0;
   color: #fff;
+  padding: 165px 50px 51px 50px;
 }
 
 /*псевдоэлемент для overlay*/
@@ -105,7 +101,7 @@ header {
 
 /*cover__title — заголовок*/
 .cover__title {
-  font-family: RalewayBold, sans-serif;
+  font-family: Raleway, Arial, sans-serif;
   font-size: 100px;
   font-weight: 700;
   line-height: 115%; /* верхняя и средняя строчки */
@@ -120,42 +116,42 @@ header {
 .aligned-text {
   display: inline-block;
   text-align: left;
-  margin-top: 165px;
-  margin-left: 50px;
+  /*margin-top: 165px; это стало паддингом cover*/ 
+  /*margin-left: 50px; это тоже стало паддингом cover*/
 }
 
 /*letter-spacing-extended - для букв но, бе, н*/
 .letter-spacing-extended {
-    letter-spacing: 60px;
-  }
-
+  letter-spacing: 60px;
+}
 /*aligned-text_center средняя строчка*/
 .aligned-text_center {
   display: inline-block;
   line-height: 120%; 
   letter-spacing: 30px;
-  margin-top: 15px;
-  margin-left: 336px;
+  margin-top: 10px;
+  margin-left: 285px;
 }
 
 /*aligned-text_right нижняя строчка*/
 .aligned-text_right {
-  display: inline-block;
+  display: block;
   text-align: end;
   line-height: 100%;
-  margin-top: 8px;
-  margin-right: 22px;
+  margin-top: 9px;
+  margin-right: -31px;/* это стало падингом cover*/
 }
 
 /*cover__description — контейнер для подзаголовка и кнопки*/
 .cover__description {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   vertical-align: center;
-  margin-top: 133px;
-  margin-left: 50px;   
+  margin-top: 137px;
+  gap: 78px;
+  /*margin-left: 50px; это стало паддингом от cover*/  
 }
 
 /*cover__description-text — текст подзаголовка*/
@@ -165,6 +161,11 @@ header {
   line-height: 28px; 
   text-transform: uppercase;
   word-spacing: 24px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  word-spacing: 18px;
 }
 
 /*bet-button — кнопка «Сделать ставку»*/
@@ -173,7 +174,7 @@ header {
   background: transparent;
   width: 256px;
   height: 51px;
-  margin-right: 50px;
+  /*margin-right: 50px; это стало паддингом cover*/
   border: 1px solid #fff;
   color: #fff;
   text-align: center;
@@ -184,10 +185,10 @@ header {
 
 /*lots — вся секция;*/
 .lots {
-    margin-top: 179px;
-    margin-right: 24px;
-    margin-left: 24px;
-    color: #fff;
+  padding-top: 179px;
+  padding-right: 24px;
+  padding-left: 24px;
+  color: #fff;
 }
 
 /*lots__heading — заголовок секции;*/
@@ -197,6 +198,7 @@ header {
   text-transform: uppercase;
   margin-left: 40px;
   margin-bottom: 27px;
+  color: #000;
 }
 
 /*lots__card-list — список карточек;*/
@@ -229,9 +231,12 @@ header {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100%;
-  background: #999999 cover center;
+  background-color: #999999;
+  background-size: cover;
+  background-position: center;
   position: relative;
   z-index: 0;
+  padding-bottom: 48px;
 }
 
 .card_type_film {
@@ -289,16 +294,6 @@ header {
   margin: 148px 24px 180px 24px;
 }
 
-/*about__title — заголовок секции;*/
-.about__title {
-  color: #000;
-  font-size: 40px;
-  font-weight: 700; 
-  text-transform: uppercase;
-  margin-top: 136px;
-  margin-bottom: 100px;
-}
-
 /*about__column — класс для колонок;*/
 .about__column-first {
   justify-content: start;
@@ -315,25 +310,33 @@ header {
   margin-left: 47px;
 }
 
+/*about__title — заголовок секции;*/
+.about__title {
+  color: #000;
+  font-size: 40px;
+  font-weight: 700; 
+  text-transform: uppercase;
+  margin-top: 136px;
+  margin-bottom: 100px;
+}
+
 /*about__text — блок для текстов секции*/
 .about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  margin-bottom: 24px;
-}
-
-.about__text-margin-bottom-0 {
-  margin-bottom: 0;
 }
 
 /*footer — подвал;*/
 .footer {
   display: grid;
-  width: 1000px;
-  height: min-content;
+  padding-right: 50px;
+  padding-left: 50px;
   grid-template-columns: 1fr 149px 1fr;
-  margin: 180px 50px 88px 50px;
+  /*margin: 180px 50px 88px 50px; тептерь не нужен*/
 }
 
 /*address*/
@@ -341,10 +344,21 @@ header {
 /*footer__address выравниваем контейнер с адресом*/
 .footer__address {
   justify-self: left;
+  text-wrap: nowrap;
+  font-style: normal;
+  line-height: 24.3px; 
+  letter-spacing: 0.18px;
 }
 
 /*footer__menu — блок навигации по списку ссылок. Мы рекомендуем окружать список тегом <nav> с этим классом;*/
 .footer__menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+/*footer__menu-list*/ 
+.footer__menu-list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
@@ -358,6 +372,16 @@ header {
   list-style-type: none;
 }
 
+/*footer__menu-link — ссылка меню;*/
+.footer__menu-link {
+  text-decoration: none;
+}
+
+/*footer__social-list - контейнер с иконками*/
+.footer__social {
+  justify-self: end;
+}
+
 /*footer__social-list — список ссылок на социальные сети. Можно не добавлять тег <nav>, потому что это ссылки на внешние ресурсы;*/
 .footer__social-list {
   display: flex;
@@ -366,23 +390,14 @@ header {
   list-style-type: none;
 }
 
-/*footer__menu-list*/ 
-.footer__menu-list {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-}
-
-/*footer__social-list - контейнер с иконками*/
-.footer__social {
-  justify-self: end;
-}
-
 /*footer__social-list-item — пункт списка ссылок на социальные сети;*/
 .footer__social-list-item {
   width: 48px;
   height: 48px;
-  background: transparent no-repeat center cover;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 
 .footer__social-icon-yt {
@@ -395,11 +410,6 @@ header {
 
 .footer__social-icon-pinterest {
   background-image: url(../images/pinterest.svg);
-}
-
-/*footer__menu-link — ссылка меню;*/
-.footer__menu-link {
-  text-decoration: none;
 }
 
 /*footer__menu-link_active — активная ссылка меню (без подчёркивания);*/
