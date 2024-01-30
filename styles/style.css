@@ -8,7 +8,7 @@ body {
 } 
 
 /*header — вся шапка*/
-header {
+.header {
     display: grid;
     padding: 92px 50px 96px 50px;
     grid-template-columns: 1fr min-content 1fr;
@@ -57,7 +57,7 @@ header {
     height: 105px;    
 }
 
-/*header__link_active — активная ссылка*/
+/*address — контейнер с адресом*/
 .address {
   align-self: end;
   justify-self: end;
@@ -66,7 +66,9 @@ header {
   margin-right: 34px;
 }
 
-/*address — контейнер с адресом*/
+/*header__link_active — активная ссылка*/
+
+/*header__address*/
 .header__address {
   font-size: 18px;
   font-style: normal;
@@ -157,10 +159,6 @@ header {
 /*cover__description-text — текст подзаголовка*/
 .cover__description-text {
   display: inline-block;
-  font-size: 22px;
-  line-height: 28px; 
-  text-transform: uppercase;
-  word-spacing: 24px;
   font-weight: 400;
   font-size: 22px;
   line-height: 28px;
@@ -171,7 +169,7 @@ header {
 /*bet-button — кнопка «Сделать ставку»*/
 .bet-button {
   display: inline-block;
-  background: transparent;
+  background-color: transparent;
   width: 256px;
   height: 51px;
   /*margin-right: 50px; это стало паддингом cover*/
@@ -204,6 +202,7 @@ header {
 /*lots__card-list — список карточек;*/
 .lots__card-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content : space-between;
   list-style-type: none;
@@ -327,7 +326,7 @@ header {
   gap: 24px;
   font-size: 20px;
   line-height: 24px;
-  letter-spacing: -0.2px;
+  letter-spacing: 0.05px;
 }
 
 /*footer — подвал;*/
@@ -335,6 +334,7 @@ header {
   display: grid;
   padding-right: 50px;
   padding-left: 50px;
+  padding-bottom: 88px;
   grid-template-columns: 1fr 149px 1fr;
   /*margin: 180px 50px 88px 50px; тептерь не нужен*/
 }
@@ -394,12 +394,14 @@ header {
 .footer__social-list-item {
   width: 48px;
   height: 48px;
-  background-color: transparent;
+  /*background-color: transparent; 
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center; картинки больше не фон*/
 }
 
+
+/* больше не фон
 .footer__social-icon-yt {
   background-image: url(../images/yt.svg);
 }
@@ -411,7 +413,7 @@ header {
 .footer__social-icon-pinterest {
   background-image: url(../images/pinterest.svg);
 }
-
+*/
 /*footer__menu-link_active — активная ссылка меню (без подчёркивания);*/
 /*footer__social-link — ссылка на социальные сети;*/
 /*footer__social-icon — иконка социальной сети.*/

@@ -26,15 +26,15 @@
         </ul>
       </nav>
       
-      <a href="#" class="header_logo">
+      <a class="header_logo">
         <img class="header_logo-image"
-         src="./images/logo-black.svg"
-         alt="Логотип страницы"/>
+        src="./images/logo-black.svg"
+        alt="Логотип страницы" >
       </a>
       
       <address class="address">
-        <p class="header__address"><a href="tel:+99995555555">+9 999 555 5555</a></p>
-        <p class="header__address"><a href="mailto:info@sobaka.ge">info@sobaka.ge</a></p>
+        <a class="header__address" href="tel:+99995555555">+9 999 555 5555</a>
+        <a class="header__address" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
         <p class="header__address">наб. Принсенграхт 263-<br> 265, Амстердам</p>
       </address>
     </header>
@@ -50,7 +50,9 @@
           </h1>
           <div class="cover__description">
             <p class="cover__description-text">Аукцион вещей, в которые никто не верил</p>
-            <button class="bet-button">сделать ставку</button>
+            <!-- <form>-->
+            <button class="bet-button" type="button">сделать ставку</button>
+            <!-- </form>-->
           </div>
       </section>
 
@@ -102,8 +104,8 @@
 
     <footer class="footer">
       <address class="address footer__address">
-        <p class="footer__address"><a href="tel:+99995555555">+9 999 555 5555</a></p>
-        <p class="footer__address"><a href="mailto:info@sobaka.ge">info@sobaka.ge</a></p>
+        <a class="footer__address" href="tel:+99995555555">+9 999 555 5555</a>
+        <a class="footer__address" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
         <p class="footer__address">наб. Принсенграхт 263-<br> 265, Амстердам</p>
       </address>
 
@@ -121,21 +123,33 @@
         </ul>       
       </nav>
 
-      <div class="footer__social">
-        <nav>
-          <ul class="footer__social-list">
-            <li class="footer__social-list-item footer__social-icon-yt">
-              <a class="footer__social-link" href="#0"></a>
-            </li>
-            <li class="footer__social-list-item footer__social-icon-vk">
-              <a class="footer__social-link" href="#0"></a>
-            </li>
-            <li class="footer__social-list-item footer__social-icon-pinterest">
-              <a class="footer__social-link" href="#0"></a>
-           </li>
-          </ul>
-        </nav>
-      </div>  
+      <nav class="footer__social">
+        <ul class="footer__social-list">
+          <li class="footer__social-list-item">
+            <a class="footer__social-link" href="#0" target="_blank">
+              <img
+              class="footer__social-icon"
+              src="./images/yt.svg"
+              alt="YouTube" >
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a class="footer__social-link" href="#0" target="_blank">
+              <img class="footer__social-icon"
+              src="./images/vk.svg"
+              alt="ВКонтакте" >
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a class="footer__social-link" href="#0" target="_blank">
+              <img
+              class="footer__social-icon"
+              src="./images/pinterest.svg"
+              alt="Pinterest" >
+            </a>
+          </li>
+        </ul>
+      </nav>  
     </footer>
   </body>
 </html>
